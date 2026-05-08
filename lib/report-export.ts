@@ -61,7 +61,7 @@ function createPdfDocument(lines: string[]) {
 
 export function exportDashboardPdf(payload: ReportPayload) {
   const lines = [
-    "XInrenOS Executive Report",
+    "FawwazCode Executive Report",
     `Generated: May 2026`,
     "",
     "Key Metrics",
@@ -87,7 +87,7 @@ export function exportDashboardPdf(payload: ReportPayload) {
 
   downloadBlob(
     new Blob([createPdfDocument(lines)], { type: "application/pdf" }),
-    "xinrenos-report.pdf",
+    "Freelance-report.pdf",
   );
 }
 
@@ -120,7 +120,7 @@ export function exportDashboardExcel(payload: ReportPayload) {
         </style>
       </head>
       <body>
-        <h1>XInrenOS Executive Report</h1>
+        <h1>FawwazCode Executive Report</h1>
         <p>Generated: May 2026</p>
         ${table("Key Metrics", [
           ["Metric", "Value", "Change"],
@@ -162,6 +162,6 @@ export function exportDashboardExcel(payload: ReportPayload) {
 
   downloadBlob(
     new Blob([html], { type: "application/vnd.ms-excel;charset=utf-8" }),
-    "xinrenos-report.xls",
+    "Freelance-report.xls",
   );
 }
